@@ -1,34 +1,27 @@
-import { useLandingContext } from '_modules/landing/hooks/useContext'
+
+import { useLandingContext } from '../hooks/useContext'
 import './style.css'
+import Header from './header'
+import Home from './home'
+import Projects from './projects'
+import Explore from './explore'
 
 export default () => {
 
-  const { state, dispatch } = useLandingContext();
 
-  const handleClick = (e: any) => {
-    e.stopPropagation()
-    dispatch({type:'loaded'})
-  }
 
+  const { state} = useLandingContext();
 
   return (
     <div 
       id="landing"
       className={state.loading ? 'loading' : 'loaded'}
     >
-      <div className='landing-content'>
-        <h1 className="landing-title">Hi, I'm <span className="landing-name">Jorge</span></h1>
-        <h2 className="landing-subtitle">I'm a <span className="landing-subtitle--highlight">Frontend Developer</span></h2>
-      </div>
-
-      <div className='landing-explore'>
-        <h1
-          className="landing-explore-title" 
-          onClick={handleClick}
-        >
-          Explore my work
-        </h1>
-      </div>
+      <Header/>
+      <Home/>
+      <Projects/>
+      <Explore/>
+      
     </div>
   )
 }

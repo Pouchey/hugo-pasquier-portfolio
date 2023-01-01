@@ -11,12 +11,12 @@ function App() {
   return (
     <LandingProvider>
       <ResumeProvider>
-        <div id="app">
-          <Landing />
-          <Scene/>
-          <UI/>
-          <Resume/>
-        </div>
+          <div id="app">
+            <UI/>
+            <Landing />
+            <Scene/>
+            <Resume/>
+          </div>
       </ResumeProvider>
     </LandingProvider>
   )

@@ -1,0 +1,35 @@
+.landing-home{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  padding: 100px 40px;
+  overflow: scroll;
+}
+.landing-home-present{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.landing-home-description{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px 0 20px;
+  transition: 0.3s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+  .landing-home-description{
+    margin-top: 80px;
+    text-align: center;
+  }
+}
