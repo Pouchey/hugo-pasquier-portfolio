@@ -6,7 +6,7 @@
   height: 100%;
   background: black;
   overflow-y: scroll;
-  transition: 0.3s ease-in-out;
+  transition: 1s ease;
 }
 .loading{
   z-index: 10;
