@@ -6,7 +6,7 @@ export const DefaultLandingState = {
 };
 
 export type LandingActionType = {
-  type: 'loaded' ;
+  type: 'loaded' | 'reset';
 };
 
 export interface LandingContextInterface {

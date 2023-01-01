@@ -8,6 +8,10 @@ const LandingReducer = (state: LandingState, { type }: LandingActionType) => {
   switch (type) {
     case 'loaded':
       return { ...state, loading: false };
+    case 'reset':
+      return initialArgs;
+    default:
+      return state;
   }
 };
 

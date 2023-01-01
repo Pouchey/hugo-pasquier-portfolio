@@ -1,10 +1,12 @@
 import {animated, useSpring} from 'react-spring'
+import { useLandingContext } from '_modules/landing/hooks/useContext';
 import { useResumeContext } from '_modules/resume/hooks/useContext'
 import './style.css'
 
 export default () => {
 
-  const { dispatch } = useResumeContext();
+  const { dispatch:dispatchResume } = useResumeContext();
+  const { dispatch:dispatchLanding } = useLandingContext();
 
   const fadeInLeft = useSpring({
     from: { opacity: 0, transform: 'translateX(-100px)' },
@@ -24,11 +26,12 @@ export default () => {
         <animated.p 
           className='ui-title'
           style={fadeInLeft}
+          onClick={() => dispatchLanding({type:'reset'})}
         >Hugo Pasquier —</animated.p>
         <animated.span 
           className='ui-info' 
           style={fadeInRight}
-          onClick={() => dispatch({type:'openResume'})}
+          onClick={() => dispatchResume({type:'openResume'})}
         >
           About me
         </animated.span>
