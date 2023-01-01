@@ -1,33 +1,50 @@
 #landing{
   position:absolute;
-  z-index: 10;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background: black;
-  overflow: hidden;
+  overflow-y: scroll;
   transition: 0.7s ease;
 }
 .loading{
+  z-index: 10;
   opacity: 1;
 }
 .loaded{
+  z-index: -1;
   opacity: 0;
   pointer-events: none;
 }
 
 
-.landing-title{
+.landing-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.landing-explore{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.landing-explore-title{
   font-size: 40px;
   color: white;
   transition: 0.3s ease;
 }
 
-.landing-title:hover{
+.landing-explore-title:hover{
   color: #1e1e1e;
   cursor: pointer;
 }
