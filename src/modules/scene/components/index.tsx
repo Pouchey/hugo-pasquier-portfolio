@@ -31,7 +31,7 @@ export default () => {
       <spotLight intensity={0.5} position={[0, 10, 10]} angle={0.6} penumbra={1} castShadow />
       <Decor/>
       <Ground/>
-      {/* <CameraRig /> */}
+      <CameraRig />
       <BakeShadows />
       
     </Canvas>

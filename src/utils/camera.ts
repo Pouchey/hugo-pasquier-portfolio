@@ -24,11 +24,39 @@ export const initCamera = () => ({
 export const CameraRig = () => {
   useFrame((state, delta) => {
 
-    const px = (state.pointer.x /3 * state.viewport.width) /3
-    const py = (1 + state.pointer.y)  / 2
-    const pz = state.camera.position.z
-    easing.damp3(state.camera.position, [px,py, pz], 0.5, delta, 5)
-  
+    // Moving the camera slightly 
+    // based on the mouse position
+    // and the camera's current rotation
+    const camera = state.camera
+    const { x, y } = state.mouse
+
+    // getting the camera's rotation
+    const { x: rx, y: ry, z: rz, w: rw } = camera.quaternion
+
+    // calculating the camera's forward vector
+    const forward = new Vector3(0, 0, -1)
+    forward.applyQuaternion(camera.quaternion)
+
+    // calculating the camera's right vector
+    const right = new Vector3(1, 0, 0)
+    right.applyQuaternion(camera.quaternion)
+
+    // calculating the camera's up vector
+    const up = new Vector3(0, 1, 0)
+    up.applyQuaternion(camera.quaternion)
+
+    // calculating the camera's position
+    // based on the mouse position
+    const px = camera.position.x + (right.x * x ) + (forward.x * y )
+    const py = camera.position.y + (right.y * x ) + (forward.y * y )
+    const pz = camera.position.z + (right.z * x ) + (forward.z * y )
+
+    // easing the camera's position
+    // to the calculated position
+    easing.damp3(state.camera.position, [px,py, pz], 1, delta, 1)
+
+    
+
   })
   return null
 }
