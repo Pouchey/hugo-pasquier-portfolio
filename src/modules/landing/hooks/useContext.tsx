@@ -1,11 +1,15 @@
 import React from 'react';
 
-import { LandingContextInterface, DefaultLandingContext } from '_modules/landing/types';
+import {
+  LandingContextInterface,
+  DefaultLandingContext,
+} from '_modules/landing/types';
 
 import useLandingReducer from './useReducer';
 
-const LandingContext =
-  React.createContext<LandingContextInterface>(DefaultLandingContext);
+const LandingContext = React.createContext<LandingContextInterface>(
+  DefaultLandingContext
+);
 LandingContext.displayName = 'Landing';
 
 export const useLandingContext = () => React.useContext(LandingContext);
@@ -19,5 +23,7 @@ export const LandingProvider = ({ children }: ProviderProps) => {
 
   const value = { state, dispatch };
 
-  return <LandingContext.Provider value={value}>{children}</LandingContext.Provider>;
+  return (
+    <LandingContext.Provider value={value}>{children}</LandingContext.Provider>
+  );
 };

@@ -35,5 +35,4 @@ export default [
     image: 'https://picsum.photos/600/300',
     link: 'https://google.com',
   },
-  
-]
+];

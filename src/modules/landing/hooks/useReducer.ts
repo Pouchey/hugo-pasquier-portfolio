@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { LandingActionType, LandingState, DefaultLandingState } from '_modules/landing/types';
+import {
+  LandingActionType,
+  LandingState,
+  DefaultLandingState,
+} from '_modules/landing/types';
 
 const initialArgs = DefaultLandingState;
 

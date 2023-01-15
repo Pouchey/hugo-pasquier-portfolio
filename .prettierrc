@@ -1,0 +1,15 @@
+{
+  "singleQuote": true,
+  "printWidth": 80,
+  "importOrder": [
+    "^_assets(.*)$",
+    "^_components(.*)$",
+    "^_modules(.*)$",
+    "^_hooks(.*)$",
+    "^_style(.*)$",
+    "^_utils(.*)$",
+    "^../(.*)$",
+    "^./(.*)$"
+  ],
+  "importOrderSeparation": true
+}

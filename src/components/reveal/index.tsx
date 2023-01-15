@@ -1,22 +1,30 @@
-import useAnimation from './Animations'
-import {animated} from 'react-spring'
+import { animated } from 'react-spring';
 
-export default (props: any) => {
+import useAnimation from './Animations';
+import { AnimationType } from './types';
 
-  const { children, type = 'fadeIn', threshold = 0.8, delay = 300, ...rest } = props;
+interface RevealProps {
+  children: React.ReactNode;
+  type?: AnimationType;
+  threshold?: number;
+  delay?: number;
+  [key: string]: any;
+}
 
-  const [animationRef,animationStyle] = useAnimation(type,threshold, delay);
+export default (props: RevealProps) => {
+  const {
+    children,
+    type = 'fadeIn',
+    threshold = 0.8,
+    delay = 300,
+    ...rest
+  } = props;
+
+  const [animationRef, animationStyle] = useAnimation(type, threshold, delay);
 
   return (
-    <animated.div
-      ref={animationRef}
-      style={animationStyle}
-      {...rest}
-    >
+    <animated.div ref={animationRef} style={animationStyle} {...rest}>
       {children}
     </animated.div>
-  )
-
-
-
-}
+  );
+};

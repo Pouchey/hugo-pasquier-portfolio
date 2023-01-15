@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface LandingState {
   loading: boolean;
 }
@@ -19,8 +21,8 @@ export const DefaultLandingContext = {
 };
 
 export type ProjectType = {
-  name: string,
-  description: string,
-  image: string,
-  link: string,
+  name: string;
+  description: string;
+  image: string;
+  link: string;
 };

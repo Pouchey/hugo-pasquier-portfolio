@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { ResumeContextInterface, DefaultResumeContext } from '_modules/resume/types';
+import {
+  ResumeContextInterface,
+  DefaultResumeContext,
+} from '_modules/resume/types';
 
 import useResumeReducer from './useReducer';
 
@@ -18,5 +21,7 @@ export const ResumeProvider = ({ children }: ProviderProps) => {
   const [state, dispatch] = useResumeReducer();
   const value = { state, dispatch };
 
-  return <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>;
+  return (
+    <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>
+  );
 };

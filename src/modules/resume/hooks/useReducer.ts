@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { ResumeActionType, ResumeState, DefaultResumeState } from '_modules/resume/types';
+import {
+  ResumeActionType,
+  ResumeState,
+  DefaultResumeState,
+} from '_modules/resume/types';
 
 const initialArgs = DefaultResumeState;
 

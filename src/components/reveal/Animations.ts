@@ -1,10 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
-import { AnimationType } from "./types";
-import useIntersectionObserver from '_hooks/useIntersection'
-import { useSpring } from 'react-spring'
+import { useRef } from 'react';
+import { useSpring } from 'react-spring';
 
+import useIntersectionObserver from '_hooks/useIntersection';
 
-const getAnimation = (animationType: AnimationType, isVisible: boolean, delay: number) => {
+import { AnimationType } from './types';
+
+const getAnimation = (
+  animationType: AnimationType,
+  isVisible: boolean,
+  delay: number
+) => {
   switch (animationType) {
     case 'zoomIn':
       return useSpring({
@@ -13,15 +18,15 @@ const getAnimation = (animationType: AnimationType, isVisible: boolean, delay: n
         config: {
           duration: delay,
         },
-      })
+      });
     case 'fadeInLeft':
       return useSpring({
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)', 
+        transform: isVisible ? 'translateX(0)' : 'translateX(-100%)',
         config: {
           duration: delay,
         },
-      })
+      });
     case 'fadeInRight':
       return useSpring({
         opacity: isVisible ? 1 : 0,
@@ -29,7 +34,7 @@ const getAnimation = (animationType: AnimationType, isVisible: boolean, delay: n
         config: {
           duration: delay,
         },
-      })
+      });
     default:
     case 'fadeIn':
       return useSpring({
@@ -37,22 +42,24 @@ const getAnimation = (animationType: AnimationType, isVisible: boolean, delay: n
         config: {
           duration: delay,
         },
-      })
-    }
-}
-      
-      
-  
+      });
+  }
+};
 
-export default (animationType: AnimationType,threshold:number, delay: number) => {
+export default (
+  animationType: AnimationType,
+  threshold: number,
+  delay: number
+) => {
+  const animationRef = useRef<HTMLDivElement | null>(null);
 
-  const animationRef = useRef<HTMLDivElement | null>(null)
+  const entry = useIntersectionObserver(animationRef, {
+    threshold,
+    delay: delay / 2,
+  });
+  const isVisible = !!entry?.isIntersecting;
 
-  const entry = useIntersectionObserver(animationRef, { threshold, delay:delay/2})
-  const isVisible = !!entry?.isIntersecting
+  const animation = getAnimation(animationType, isVisible, 0);
 
-  const animation = getAnimation(animationType, isVisible, 0)
-  
-
-  return [animationRef , animation]
-}
+  return [animationRef, animation];
+};

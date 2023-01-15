@@ -1,24 +1,24 @@
+import { useRef, useEffect } from 'react';
 
-import { useLandingContext } from '../hooks/useContext'
-import './style.css'
-import Header from './header'
-import Home from './home'
-import Projects from './projects'
-import Explore from './explore'
-import { useRef, useEffect } from 'react'
+import { useLandingContext } from '../hooks/useContext';
+
+import Explore from './explore';
+import Header from './header';
+import Home from './home';
+import Projects from './projects';
+import './style.css';
 
 export default () => {
-
   const { state } = useLandingContext();
-  const ref = useRef<HTMLDivElement | null>(null)
+  const ref = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (state.loading) {
       ref.current?.scrollTo({
         top: 0,
-        behavior: 'smooth'
-      })
+        behavior: 'smooth',
+      });
     }
-  }, [state.loading])
+  }, [state.loading]);
 
   return (
     <div
@@ -30,7 +30,6 @@ export default () => {
       <Home />
       <Projects />
       <Explore />
-
     </div>
-  )
-}
+  );
+};

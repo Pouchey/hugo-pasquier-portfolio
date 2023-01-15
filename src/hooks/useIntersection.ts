@@ -1,9 +1,10 @@
-import { RefObject, useEffect, useState } from 'react'
-import useDebounce from './useDebounce'
+import { RefObject, useEffect, useState } from 'react';
+
+import useDebounce from './useDebounce';
 
 interface Args extends IntersectionObserverInit {
-  freezeOnceVisible?: boolean
-  delay?: number
+  freezeOnceVisible?: boolean;
+  delay?: number;
 }
 
 function useIntersectionObserver(
@@ -14,35 +15,41 @@ function useIntersectionObserver(
     rootMargin = '0%',
     freezeOnceVisible = false,
     delay = 100,
-  }: Args,
+  }: Args
 ): IntersectionObserverEntry | undefined {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>()
-  const debouncedEntry = useDebounce<IntersectionObserverEntry | undefined>(entry, delay)
+  const [entry, setEntry] = useState<IntersectionObserverEntry>();
+  const debouncedEntry = useDebounce<IntersectionObserverEntry | undefined>(
+    entry,
+    delay
+  );
 
-  const frozen = entry?.isIntersecting && freezeOnceVisible
+  const frozen = entry?.isIntersecting && freezeOnceVisible;
 
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry)
-  }
+    setEntry(entry);
+  };
 
   useEffect(() => {
-    const node = elementRef?.current // DOM Ref
-    const hasIOSupport = !!window.IntersectionObserver
+    const node = elementRef?.current; // DOM Ref
+    const hasIOSupport = !!window.IntersectionObserver;
 
-    if (!hasIOSupport || frozen || !node) return
+    if (!hasIOSupport || frozen || !node) return;
 
-    const observerParams = { threshold, root, rootMargin }
-    const observer = new IntersectionObserver(updateEntry, observerParams)
+    const observerParams = { threshold, root, rootMargin };
+    const observer = new IntersectionObserver(updateEntry, observerParams);
 
-    observer.observe(node)
+    observer.observe(node);
 
-    return () => observer.disconnect()
+    return () => observer.disconnect();
+  }, [
+    elementRef?.current,
+    JSON.stringify(threshold),
+    root,
+    rootMargin,
+    frozen,
+  ]);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [elementRef?.current, JSON.stringify(threshold), root, rootMargin, frozen])
-
-
-  return debouncedEntry
+  return debouncedEntry;
 }
 
-export default useIntersectionObserver
+export default useIntersectionObserver;
