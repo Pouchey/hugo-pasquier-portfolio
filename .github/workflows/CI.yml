@@ -8,11 +8,13 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: "14.x"
     - name: Install packages
       run: npm install
     - name: Lint
       run: npm run lint:all
+  build:
+    needs: lint
     - name: Build
       run: npm run build
 
