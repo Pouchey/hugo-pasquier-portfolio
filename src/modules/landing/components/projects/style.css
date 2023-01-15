@@ -27,7 +27,7 @@
 }
 .landing-projects-list{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   width: 100%;
   height: 100%;
@@ -88,6 +88,8 @@
   .landing-projects{
     padding: 40px 20px;
   }
+}
+@media screen and (max-width: 1200px){
   .landing-projects-list{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }

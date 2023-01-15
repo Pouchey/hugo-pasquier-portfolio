@@ -12,7 +12,7 @@ export default () => {
       <Reveal
         type="zoomIn"
         className="landing-home-present"
-        treshold={0.5}
+        treshold={0.1}
         delay={700}
       >
         <h1 className="landing-title">
@@ -26,7 +26,7 @@ export default () => {
       <Reveal
         type="zoomIn"
         className="landing-home-description"
-        treshold={0.5}
+        treshold={0.1}
         delay={700}
       >
         <p className="landing-description">

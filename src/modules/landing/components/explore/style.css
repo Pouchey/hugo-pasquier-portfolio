@@ -19,4 +19,11 @@
   cursor: pointer;
 }
 
-
+@media screen and (max-width: 800px){
+  .landing-explore{
+    padding: 40px 20px;
+  }
+  .landing-explore-title{
+    font-size: 20px;
+  }
+}
