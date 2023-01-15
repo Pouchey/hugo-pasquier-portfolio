@@ -61,5 +61,5 @@ export default (
 
   const animation = getAnimation(animationType, isVisible, 0);
 
-  return [animationRef, animation];
+  return [animationRef, animation] as const;
 };
