@@ -1,9 +1,7 @@
 name: CD
 on:
-  pull_request:
-  push:
-    branches: ["main"]
   workflow_dispatch:
+    branches: ["main"]
 
 jobs:
   lint:
