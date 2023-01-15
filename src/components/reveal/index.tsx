@@ -3,13 +3,12 @@ import { animated } from 'react-spring';
 import useAnimation from './Animations';
 import { AnimationType } from './types';
 
-interface RevealProps {
+type RevealProps = {
   children: React.ReactNode;
   type?: AnimationType;
   threshold?: number;
   delay?: number;
-  [key: string]: any;
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
 export default (props: RevealProps) => {
   const {
