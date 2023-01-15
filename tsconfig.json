@@ -18,6 +18,7 @@
     "paths": {
       "_assets/*": ["./src/assets/*"],
       "_components/*": ["./src/components/*"],
+      "_hooks/*": ["./src/hooks/*"],
       "_modules/*": ["./src/modules/*"],
       "_utils/*": ["./src/utils/*"],
       "_style/*": ["./src/style/*"],

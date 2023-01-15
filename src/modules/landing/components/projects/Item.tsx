@@ -1,8 +1,12 @@
+import Reveal from "_components/reveal"
 import { ProjectType } from "_modules/landing/types"
 
 export default ({project } : {project:ProjectType}) => {
   return (
-    <div
+
+    <Reveal
+      type="zoomIn"
+      threshold={0.1}
       className="landing-projects-item"
     >
       <img
@@ -14,6 +18,6 @@ export default ({project } : {project:ProjectType}) => {
         <h2 className="landing-projects-item-title">{project.name}</h2>
         <p className="landing-projects-item-description">{project.description}</p>
       </div>
-    </div>
+    </Reveal>
   )
 }

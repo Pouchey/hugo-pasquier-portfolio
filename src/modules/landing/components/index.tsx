@@ -5,14 +5,14 @@ import Header from './header'
 import Home from './home'
 import Projects from './projects'
 import Explore from './explore'
-import { createRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
 
 export default () => {
 
   const { state } = useLandingContext();
-  const ref = createRef<HTMLDivElement>()
+  const ref = useRef<HTMLDivElement | null>(null)
   useEffect(() => {
-    if(state.loading){
+    if (state.loading) {
       ref.current?.scrollTo({
         top: 0,
         behavior: 'smooth'
@@ -21,16 +21,16 @@ export default () => {
   }, [state.loading])
 
   return (
-    <div 
+    <div
       id="landing"
       className={state.loading ? 'loading' : 'loaded'}
       ref={ref}
     >
-      <Header/>
-      <Home/>
-      <Projects/>
-      <Explore/>
-      
+      <Header />
+      <Home />
+      <Projects />
+      <Explore />
+
     </div>
   )
 }

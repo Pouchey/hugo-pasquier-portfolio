@@ -1,3 +1,4 @@
+import Reveal from '_components/reveal';
 import { useLandingContext } from '_modules/landing/hooks/useContext'
 import './style.css'
 
@@ -12,12 +13,16 @@ export default () => {
 
   return(
     <section className='landing-explore'>
-    <h1
+    <Reveal
       className="landing-explore-title" 
+      type="fadeIn"
+      threshold={1}
+      delay={700}
+
       onClick={handleClick}
     >
       Explore my work
-    </h1>
+    </Reveal>
   </section>
   )
 }

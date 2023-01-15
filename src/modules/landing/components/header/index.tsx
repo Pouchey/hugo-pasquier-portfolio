@@ -1,39 +1,32 @@
-import {animated, useSpring} from 'react-spring'
+import Reveal from '_components/reveal';
 import { useResumeContext } from '_modules/resume/hooks/useContext';
 import './style.css'
+
 export default () => {
 
   const { dispatch: dispatchResume } = useResumeContext();
-
-  const fadeInLeft = useSpring({
-    from: { opacity: 0, transform: 'translateX(-100px)' },
-    to: { opacity: 1, transform: 'translateX(0px)' },
-    config: { duration: 300 }
-  })
-
-  const fadeInRight = useSpring({
-    from: { opacity: 0, transform: 'translateX(100px)' },
-    to: { opacity: 1, transform: 'translateX(0px)' },
-    config: { duration: 300 }
-  })
-
   return(
     <section
         className='landing-header'
       >
-        <animated.p 
+        <Reveal
           className='ui-title'
-          style={fadeInLeft}
+          type="fadeInLeft"
+          threshold={0.2}
+          delay={700}
         >
           Hugo Pasquier —
-        </animated.p>
-        <animated.span 
-          className='ui-info' 
-          style={fadeInRight}
+        </Reveal>
+        <Reveal
+          className='ui-info'
+          type="fadeInRight"
+          threshold={0.2}
+          delay={700}
+
           onClick={() => dispatchResume({type:'openResume'})}
         >
           About me
-        </animated.span>
+        </Reveal>
       </section>
   )
 }
