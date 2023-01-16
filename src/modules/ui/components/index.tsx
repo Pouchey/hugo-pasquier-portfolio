@@ -44,7 +44,7 @@ export default () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Icon iconName="github" size={32} color="#fff"/>
+            <Icon iconName="github" size={30} color="#fff"/>
             <p className="ui-network-name">hugopasquier</p>
           </a>
         </div>

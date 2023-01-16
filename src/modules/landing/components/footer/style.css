@@ -1,11 +1,10 @@
 .landing-footer{
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 40px;
   background-color: #1e1e1e;
   color: #fff;
-
 }

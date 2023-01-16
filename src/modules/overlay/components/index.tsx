@@ -26,8 +26,8 @@ export default () => {
         `}
       >
         <span className="overlay-open-line" />
-        <div className="overlay-open-button">
-          <div className="overlay-open-button-content" onClick={handleClick}>
+        <div className="overlay-open-button"  onClick={handleClick}>
+          <div className="overlay-open-button-content">
             more
           </div>
         </div>
