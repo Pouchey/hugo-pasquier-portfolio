@@ -35,6 +35,14 @@ const getAnimation = (
           duration: delay,
         },
       });
+    case 'fadeInUp':
+      return useSpring({
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
+        config: {
+          duration: delay,
+        },
+      });
     default:
     case 'fadeIn':
       return useSpring({

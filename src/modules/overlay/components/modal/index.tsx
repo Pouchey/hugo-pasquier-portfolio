@@ -1,6 +1,7 @@
 import useOnclickOutside from 'react-cool-onclickoutside';
 
 import projectsDetailled from '_assets/projectsDetailled';
+import Icon from '_components/icon';
 
 import { getProject } from '_utils/projects';
 
@@ -44,11 +45,7 @@ export default ({ projectId, isOpen, handleClose }: ModalProps) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
-                className="ui-network-icon"
-                src="https://img.icons8.com/ios-filled/50/000000/github.png"
-                alt="github"
-              />
+              <Icon iconName="github" size={32} color="#fff"/>
               <p className="ui-network-name">Check on github</p>
             </a>
           </div>

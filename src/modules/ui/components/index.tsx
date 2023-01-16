@@ -1,3 +1,4 @@
+import Icon from '_components/icon';
 import { useLandingContext } from '_modules/landing/hooks/useContext';
 import Overlay from '_modules/overlay/components';
 import { useResumeContext } from '_modules/resume/hooks/useContext';
@@ -33,11 +34,7 @@ export default () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              className="ui-network-icon"
-              src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
-              alt="linkedin"
-            />
+            <Icon iconName="linkedin" size={32} color="#fff"/>
             <p className="ui-network-name">Hugo Pasquier</p>
           </a>
 
@@ -47,11 +44,7 @@ export default () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              className="ui-network-icon"
-              src="https://img.icons8.com/ios-filled/50/000000/github.png"
-              alt="github"
-            />
+            <Icon iconName="github" size={32} color="#fff"/>
             <p className="ui-network-name">hugopasquier</p>
           </a>
         </div>

@@ -68,7 +68,6 @@
 .ui-network-icon{
   width: 2rem;
   height: 2rem;
-  background-color: white;
   border-radius: 4px;
 }
 
@@ -81,7 +80,11 @@
 .ui-network:hover{
   cursor: pointer;
   background: white;
-  border-radius: 4px;
+  border-radius: 4px; 
+}
+
+.ui-network:hover svg {
+  fill: #1e1e1e !important;
 }
 
 .ui-network:hover .ui-network-name{

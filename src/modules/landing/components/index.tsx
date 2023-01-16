@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import { useLandingContext } from '../hooks/useContext';
 
 import Explore from './explore';
+import Footer from './footer';
 import Header from './header';
 import Home from './home';
 import Projects from './projects';
@@ -30,6 +31,7 @@ export default () => {
       <Home />
       <Projects />
       <Explore />
+      <Footer />
     </div>
   );
 };

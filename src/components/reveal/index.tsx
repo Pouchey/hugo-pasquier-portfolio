@@ -23,7 +23,14 @@ export default (props: RevealProps) => {
   const [animationRef, animationStyle] = useAnimation(type, threshold, delay);
 
   return (
-    <animated.div ref={animationRef} style={animationStyle} {...rest}>
+    <animated.div
+      ref={animationRef}
+      style={{
+        ...animationStyle,
+        transition: `${delay}ms `,
+      }}
+      {...rest}
+    >
       {children}
     </animated.div>
   );
