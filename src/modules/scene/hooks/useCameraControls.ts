@@ -40,6 +40,9 @@ export default () => {
     },
     id: string
   ) => {
+    
+    dispatch({ type: 'reset', payload: { id: null } });
+
     const { position, rotation } = e.object;
 
     p.current.set(
@@ -49,7 +52,11 @@ export default () => {
     );
     q.current.setFromAxisAngle(new Vector3(0, 1, 0), rotation.y);
 
-    dispatch({ type: 'setSelectedObject', payload: { id } });
+    setTimeout(() => {
+      dispatch({ type: 'setSelectedObject', payload: { id } })
+    },
+    1000);
+
   };
 
   const resetCamera = () => {
@@ -65,7 +72,7 @@ export default () => {
       DEFAULT_CAMERA_ROTATION.w
     );
 
-    dispatch({ type: 'setSelectedObject', payload: { id: null } });
+    dispatch({ type: 'reset', payload: { id: null } });
   };
 
   return { moveToObject, resetCamera };
