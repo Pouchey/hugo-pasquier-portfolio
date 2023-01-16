@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import Ground from '_components/ground';
 
 import { useLandingContext } from '_modules/landing/hooks/useContext';
+import { useOverlayContext } from '_modules/overlay/hooks/useContext';
 import { useResumeContext } from '_modules/resume/hooks/useContext';
 
 import { CameraRig, initCamera } from '_utils/camera';
@@ -15,6 +16,7 @@ export default () => {
 
   const { state: landing } = useLandingContext();
   const { state: resume } = useResumeContext();
+  const { state: overlay } = useOverlayContext();
 
   return (
     <Canvas
@@ -42,7 +44,7 @@ export default () => {
       />
       <Decor />
       <Ground />
-      {/* <CameraRig /> */}
+      {!overlay.id && <CameraRig />}
       <BakeShadows />
     </Canvas>
   );

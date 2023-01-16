@@ -9,7 +9,7 @@ export const DefaultOverlayState = {
 
 export type OverlayActionType = {
   type: 'setSelectedObject' | 'reset';
-  payload: OverlayState ;
+  payload: OverlayState;
 };
 
 export interface OverlayContextInterface {
