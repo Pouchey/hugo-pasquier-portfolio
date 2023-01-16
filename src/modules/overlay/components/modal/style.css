@@ -1,0 +1,101 @@
+.overlay-modal{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.overlay-modal.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-modal-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 60%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border: 2px solid #9d1cc4;
+  overflow: hidden;
+}
+
+.overlay-modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.overlay-modal-content{
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+
+.overlay-modal-title{
+  font-size: 2em;
+  color: white;
+  transition: 0.3s ease;
+    
+}
+
+.overlay-modal-title::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #9d1cc4;
+  transition: 0.3s ease;
+}
+
+
+.overlay-modal-image{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.overlay-modal-description{
+  font-size: 1.5em;
+  color: white;
+  transition: 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .overlay-modal-container{
+    width: 80%;
+    height: 70%;
+  }
+  .overlay-modal-content{
+    flex-direction: column;
+  }
+
+}

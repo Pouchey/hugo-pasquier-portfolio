@@ -1,11 +1,53 @@
-#overlay{
-  position:absolute;
-  top:0;
+.overlay-open{
+  position: absolute;
+  z-index: 10;
+  right:0;
+  bottom: 15%;
   left:0;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  height:100%;
-  color: white;
+  display: flex;
+  gap:20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay-open.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-open-line{
+  display: block;
+  height: 2px;
+  width: 15%;
+  background-color: #fff;
+}
+
+.overlay-open-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+
+} 
+
+.overlay-open-button-content{
+  display: block;
+  font-size: 1em;
+  color:#fff;
+  transform: rotate(-45deg);
+  user-select: none; 
+}
+
+
+.overlay-open-button:hover{
+  background-color: rgb(255, 255, 255, 0.2);
 }

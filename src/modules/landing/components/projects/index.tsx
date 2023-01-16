@@ -1,4 +1,4 @@
-import { ProjectType } from '_modules/landing/types';
+import { ProjectType } from '_types/project';
 
 import projects from '../../../../assets/projects';
 

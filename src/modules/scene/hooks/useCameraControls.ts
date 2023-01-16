@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { Object3D, Quaternion, Vector3 } from 'three';
 
 import { useOverlayContext } from '_modules/overlay/hooks/useContext';
@@ -40,7 +40,6 @@ export default () => {
     },
     id: string
   ) => {
-    
     dispatch({ type: 'reset', payload: { id: null } });
 
     const { position, rotation } = e.object;
@@ -53,10 +52,8 @@ export default () => {
     q.current.setFromAxisAngle(new Vector3(0, 1, 0), rotation.y);
 
     setTimeout(() => {
-      dispatch({ type: 'setSelectedObject', payload: { id } })
-    },
-    1000);
-
+      dispatch({ type: 'setSelectedObject', payload: { id } });
+    }, 1000);
   };
 
   const resetCamera = () => {

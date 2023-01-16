@@ -1,6 +1,6 @@
 import Reveal from '_components/reveal';
 
-import { ProjectType } from '_modules/landing/types';
+import { ProjectType } from '_types/project';
 
 export default ({ project }: { project: ProjectType }) => {
   return (

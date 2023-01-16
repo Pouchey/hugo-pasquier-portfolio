@@ -20,8 +20,9 @@
       "_components/*": ["./src/components/*"],
       "_hooks/*": ["./src/hooks/*"],
       "_modules/*": ["./src/modules/*"],
-      "_utils/*": ["./src/utils/*"],
       "_style/*": ["./src/style/*"],
+      "_types/*": ["./src/types/*"],
+      "_utils/*": ["./src/utils/*"],
       
     },
   },

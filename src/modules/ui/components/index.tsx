@@ -9,7 +9,7 @@ export default () => {
   const { dispatch: dispatchLanding } = useLandingContext();
 
   return (
-    <div id="ui">
+    <>
       <div className="ui-header">
         <div
           className="ui-title"
@@ -56,6 +56,6 @@ export default () => {
           </a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
