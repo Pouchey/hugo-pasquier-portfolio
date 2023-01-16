@@ -19,7 +19,7 @@
 }
 
 .landing-title{
-  font-size: 5rem;
+  font-size: 5em;
   color: white;
   transition: 0.3s ease;
 }
@@ -27,7 +27,7 @@
   color: #9d1cc4;
 }
 .landing-subtitle{
-  font-size: 3rem;
+  font-size: 3em;
   color: white;
   transition: 0.3s ease;
 }
@@ -40,7 +40,7 @@
   transition: 0.3s ease;
 }
 .landing-description{
-  font-size: 2rem;
+  font-size: 2em;
   color: white;
   transition: 0.3s ease;
 }

@@ -1,6 +1,5 @@
-import { animated, useSpring } from 'react-spring';
-
 import { useLandingContext } from '_modules/landing/hooks/useContext';
+import Overlay from '_modules/overlay/components';
 import { useResumeContext } from '_modules/resume/hooks/useContext';
 
 import './style.css';
@@ -9,38 +8,25 @@ export default () => {
   const { dispatch: dispatchResume } = useResumeContext();
   const { dispatch: dispatchLanding } = useLandingContext();
 
-  const fadeInLeft = useSpring({
-    from: { opacity: 0, transform: 'translateX(-100px)' },
-    to: { opacity: 1, transform: 'translateX(0px)' },
-    config: { duration: 300 },
-  });
-
-  const fadeInRight = useSpring({
-    from: { opacity: 0, transform: 'translateX(100px)' },
-    to: { opacity: 1, transform: 'translateX(0px)' },
-    config: { duration: 300 },
-  });
-
   return (
     <div id="ui">
       <div className="ui-header">
-        <animated.p
+        <div
           className="ui-title"
-          style={fadeInLeft}
           onClick={() => dispatchLanding({ type: 'reset' })}
         >
           Hugo Pasquier —
-        </animated.p>
-        <animated.span
+        </div>
+        <div
           className="ui-info"
-          style={fadeInRight}
           onClick={() => dispatchResume({ type: 'openResume' })}
         >
           About me
-        </animated.span>
+        </div>
       </div>
+      <Overlay />
       <div className="ui-footer">
-        <animated.div className="ui-networks" style={fadeInLeft}>
+        <div className="ui-networks">
           <a
             className="ui-network"
             href="https://www.linkedin.com/in/hugo-pasquier-7b6353202/"
@@ -68,7 +54,7 @@ export default () => {
             />
             <p className="ui-network-name">hugopasquier</p>
           </a>
-        </animated.div>
+        </div>
       </div>
     </div>
   );

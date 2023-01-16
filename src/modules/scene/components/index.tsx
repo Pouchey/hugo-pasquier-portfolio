@@ -42,7 +42,7 @@ export default () => {
       />
       <Decor />
       <Ground />
-      <CameraRig />
+      {/* <CameraRig /> */}
       <BakeShadows />
     </Canvas>
   );

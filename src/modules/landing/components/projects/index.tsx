@@ -1,7 +1,8 @@
 import { ProjectType } from '_modules/landing/types';
 
+import projects from '../../../../assets/projects';
+
 import Item from './Item';
-import projects from './projects';
 import './style.css';
 
 export default () => {

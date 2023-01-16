@@ -8,6 +8,7 @@ import {
 } from '_utils/camera';
 
 export default () => {
+
   const p = new Vector3(
     DEFAULT_CAMERA_POSITION.x,
     DEFAULT_CAMERA_POSITION.y,
@@ -21,8 +22,8 @@ export default () => {
   );
 
   useFrame((state, dt) => {
-    easing.damp3(state.camera.position, p, 0.4, dt, 10);
-    easing.dampQ(state.camera.quaternion, q, 0.4, dt, 10);
+    easing.damp3(state.camera.position, p, 0.4, dt, Infinity);
+    easing.dampQ(state.camera.quaternion, q, 0.4, dt, Infinity);
   });
 
   const moveToObject = (e: {
@@ -53,7 +54,7 @@ export default () => {
       DEFAULT_CAMERA_ROTATION.z,
       DEFAULT_CAMERA_ROTATION.w
     );
-  };
+  };  
 
   return { moveToObject, resetCamera };
 };
