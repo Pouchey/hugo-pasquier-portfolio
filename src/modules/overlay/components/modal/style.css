@@ -28,9 +28,16 @@
   height: 60%;
   padding: 20px;
   background-color: #1e1e1e;
-  border: 2px solid #9d1cc4;
   overflow: hidden;
+  /* glow */
+  box-shadow:  
+    0rem 0rem 10.2rem 1rem #9d1cc494
+  ;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
+
+
 
 .overlay-modal-header{
   display: flex;

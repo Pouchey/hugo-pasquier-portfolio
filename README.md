@@ -47,7 +47,7 @@ Ce site web est déployé sur [Netlify](https://www.netlify.com/) et est accessi
 
 ## Auteurs ✒️
 
-* **Rouchet Théophile** - *Développement* - [RouchetThéophile]()
+* **Rouchet Théophile** - *Développement* - [Rouchet Théophile]()
 
 ## License 📄
 
