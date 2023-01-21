@@ -12,8 +12,8 @@ export default () => {
       <Reveal
         type="zoomIn"
         className="landing-home-present"
-        treshold={0.1}
-        delay={700}
+        treshold={0.5}
+        delay={600}
       >
         <h1 className="landing-title">
           Hi, I'm <span className="landing-highlight">Hugo</span>
@@ -26,8 +26,8 @@ export default () => {
       <Reveal
         type="zoomIn"
         className="landing-home-description"
-        treshold={0.1}
-        delay={700}
+        treshold={0.5}
+        delay={600}
       >
         <p className="landing-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,

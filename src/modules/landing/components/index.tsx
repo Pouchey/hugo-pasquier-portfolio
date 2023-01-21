@@ -30,8 +30,9 @@ export default () => {
       <Header />
       <Home />
       <Projects />
-      <Explore />
-      <Footer />
+      <Explore>
+        <Footer />
+      </Explore>
     </div>
   );
 };

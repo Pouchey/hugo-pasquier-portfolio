@@ -11,7 +11,7 @@ export default () => {
       <Reveal
         className="ui-title"
         type="fadeInLeft"
-        threshold={0.2}
+        threshold={0}
         delay={700}
       >
         Hugo Pasquier —
@@ -19,7 +19,7 @@ export default () => {
       <Reveal
         className="ui-info"
         type="fadeInRight"
-        threshold={0.2}
+        threshold={0}
         delay={700}
         onClick={() => dispatchResume({ type: 'openResume' })}
       >

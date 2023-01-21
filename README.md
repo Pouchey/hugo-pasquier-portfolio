@@ -47,7 +47,7 @@ Ce site web est déployé sur [Netlify](https://www.netlify.com/) et est accessi
 
 ## Auteurs ✒️
 
-* **Rouchet Théophile** - *Développement* - [Rouchet Théophile]()
+* **Rouchet Théophile** - *Développement* - [Rouchet Théophile](https://github.com/Pouchey)
 
 ## License 📄
 
@@ -55,7 +55,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour p
 
 ## Remerciements 🙏
 
-* Merci à [Rouchet Théophile]() pour son aide dans le développement de ce site web 📢
+* Merci à [Rouchet Théophile](https://github.com/Pouchey) pour son aide dans le développement de ce site web 📢
 
 
 

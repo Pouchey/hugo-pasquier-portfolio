@@ -5,7 +5,8 @@ import './style.css';
 
 export default () => {
   return (
-    <Reveal type="fadeInUp" threshold={0.5} className="landing-footer">
+    <div className="landing-footer">
+    <Reveal type="fadeInUp" threshold={0} className="landing-footer-content">
       <a
         href="https://www.github.com/hugopasquier"
         target="_blank"
@@ -28,5 +29,6 @@ export default () => {
 
 
     </Reveal>
+    </div>
   );
 };
