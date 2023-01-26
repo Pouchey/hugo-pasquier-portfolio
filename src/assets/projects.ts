@@ -56,7 +56,58 @@ export default [
     ],
     github: 'https://github.com/HugoPasquier/Tree_Generation_Unity'
   },
-
-
-  
+  {
+    name: 'Nano defense',
+    short: 'Nano defense',
+    description: `
+      Nano Defense est un jeu développé lors d'une game jam de 48 H sur le thème « virus » Le
+      joueur incarne un nanorobot en forme d'anticorps injecté dans le corps pour combattre tout type
+      de virus C'est un jeu de scoring utilisant le principe du « hit and run », étant donné que le
+      mouvement et le tir suivent tous deux le curseur de la souris Le jeu a été réalisé avec Game
+      Maker Studio 2 Le jeu a été fait avec l'aide d'un ami qui a créé la grande majorité des éléments
+      visuels
+    `,
+    image: './assets/NanoDefense/Start_Screen.png',
+    slider: [
+      './assets/NanoDefense/Start_Screen.png',
+      './assets/NanoDefense/Gameplay_1.png',
+      './assets/NanoDefense/Gameplay_2.png',
+      './assets/NanoDefense/GameOver_Screen.png',
+    ],
+    github: 'https://github.com/HugoPasquier/Nano-Defense',
+  },
+  {
+    name: 'Earth OpenGL',
+    short: 'Earth OpenGL',
+    description: `
+      Projet en OpenGL qui fait un rendu d'une sphère avec une combinaison de différentes texture et d'une normal map donnant l'illusion de relief.
+      Ce projet est basé sur le cours "Monde 3D" de Pierre Benard et Gaël Guennebaud à l'Université de Bordeaux.
+    `,
+    image: './assets/EarthOpenGL/Normal_mapping.png',
+    slider: [
+      './assets/EarthOpenGL/Normal_mapping.png',
+      './assets/EarthOpenGL/Jour.png',
+      './assets/EarthOpenGL/Nuit.png',
+      './assets/EarthOpenGL/Mix_nuage.png',
+      './assets/EarthOpenGL/Mix_nuage_nuit.png',
+      './assets/EarthOpenGL/Simulation_soleil.png',
+    ],
+    github: 'https://github.com/HugoPasquier/EarthOpenGL'
+  },
+  {
+    name: 'Ray Tracer',
+    short: 'Ray Tracer',
+    description: `
+      Implémentation d'un lanceur de rayon intégrant l'illuminsation directe, des ombres simples et la reflexion.
+      Ce projet a été fait en C++ et est basé sur le cours de synthèse d'image de Guillaume Bouchard au sein de la formation Gamagora (Universite Lumière Lyon 2)
+    `,
+    image: './assets/RayTracer/red_mat_and_mirror_spheres.png',
+    slider: [
+      './assets/RayTracer/red_mat_and_mirror_spheres.png',
+      './assets/RayTracer/red_mat_spheres.png',
+      './assets/RayTracer/mirror_spheres.png',
+    ],
+    github: 'https://github.com/HugoPasquier/RayTracer_Gamagora'
+  },
+    
 ];
