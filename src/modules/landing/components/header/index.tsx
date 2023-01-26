@@ -23,7 +23,7 @@ export default () => {
         delay={700}
         onClick={() => dispatchResume({ type: 'openResume' })}
       >
-        About me
+        Voir mon CV
       </Reveal>
     </section>
   );

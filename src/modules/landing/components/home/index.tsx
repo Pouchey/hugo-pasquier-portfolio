@@ -16,10 +16,10 @@ export default () => {
         delay={600}
       >
         <h1 className="landing-title">
-          Hi, I'm <span className="landing-highlight">Hugo</span>
+          <span className="landing-highlight">Hugo Pasquier</span>
         </h1>
         <h2 className="landing-subtitle">
-          I'm a <span className="landing-highlight">Game Developer</span>
+          Développeur de Jeux Vidéo
         </h2>
       </Reveal>
 
@@ -30,17 +30,20 @@ export default () => {
         delay={600}
       >
         <p className="landing-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
-          ducimus corrupti fuga nesciunt impedit eaque maxime suscipit
-          architecto temporibus molestiae adipisci blanditiis, nemo deserunt,
-          illo iusto necessitatibus consequuntur laudantium velit.
+          Actuellement étudiant à Gamagora dans le M2 informatique : 
+          Ingénierie du jeu vidéo (Université Lumière Lyon 2).
+          <br/>
+          Je me suis spécialisé dans le développement de jeux vidéo, 
+          pour évoluer au sein d'un milieu qui me passionne 
+          et parce que tout ce qui tourne autour du rendu d'image 
+          et du game design m'intéresse énormément.
         </p>
         <div className="landing-line" />
         <span
           className="landing-info"
           onClick={() => dispatchResume({ type: 'openResume' })}
         >
-          About me
+          Voir mon CV
         </span>
       </Reveal>
     </section>

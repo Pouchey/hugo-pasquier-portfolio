@@ -1,0 +1,5 @@
+Je suis Hugo Pasquier, développeur de Jeux Vidéo Junior, et j'étudie actuellement à Gamagora dans le M2 informatique : Ingénierie du jeu vidéo (Université Lumière Lyon 2).
+
+Avant d'arriver à cette dernière année de Master, j'ai obtenu une licence informatique à l'Université de Poitiers, ainsi qu'une première année de Master en informatique pour l'image et le son à l'Université de Bordeaux.
+
+Je me suis spécialisé dans le développement de jeux vidéo, pour évoluer au sein d'un milieu qui me passionne et parce que tout ce qui tourne autour du rendu d'image et du game design m'intéresse énormément.

@@ -22,7 +22,7 @@ export default () => {
           className="ui-info"
           onClick={() => dispatchResume({ type: 'openResume' })}
         >
-          About me
+          Voir mon CV
         </div>
       </div>
       <Overlay />

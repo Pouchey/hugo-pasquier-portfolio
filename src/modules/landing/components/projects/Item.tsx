@@ -13,7 +13,7 @@ export default ({ project }: { project: ProjectType }) => {
       <div className="landing-projects-item-info">
         <h2 className="landing-projects-item-title">{project.name}</h2>
         <p className="landing-projects-item-description">
-          {project.description}
+          {project.short}
         </p>
       </div>
     </Reveal>

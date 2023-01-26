@@ -1,8 +1,12 @@
 export type ProjectType = {
   name: string;
+  short: string;
   description: string;
   image: string;
-  link: string;
+  slider: string[];
+  github?: string;
+  itchio?: string;
+  release?: string;
 };
 
 export type ProjectDetailledType = {

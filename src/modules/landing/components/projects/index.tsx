@@ -9,7 +9,7 @@ export default () => {
   return (
     <section className="landing-projects">
       <div className="landing-projects-header">
-        <h1 className="landing-subtitle">Some of my Projects</h1>
+        <h1 className="landing-subtitle">Mes Projets</h1>
       </div>
       <div className="landing-projects-list">
         {projects.map((project: ProjectType, index: number) => (

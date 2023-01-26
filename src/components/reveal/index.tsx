@@ -24,11 +24,11 @@ export default (props: RevealProps) => {
 
   return (
     <animated.div
-      ref={animationRef}
-      style={{
-        ...animationStyle,
-        transition: `${delay}ms `,
-      }}
+      // ref={animationRef}
+      // style={{
+      //   ...animationStyle,
+      //   transition: `${delay}ms `,
+      // }}
       {...rest}
     >
       {children}
