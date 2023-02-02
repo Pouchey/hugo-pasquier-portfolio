@@ -1,9 +1,6 @@
-import { ProjectDetailledType } from '_types/project';
+import { ProjectType } from '_types/project';
 
-export const getProject = (
-  id: string | null,
-  projects: ProjectDetailledType[]
-) => {
+export const getProject = (id: string | null, projects: ProjectType[]) => {
   if (!id) return null;
-  return projects.find((project: ProjectDetailledType) => project.id === id);
+  return projects.find((project: ProjectType) => project.name === id);
 };

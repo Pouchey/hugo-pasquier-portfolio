@@ -10,22 +10,17 @@ interface IProps {
 }
 
 export default (props: IProps) => {
-  const { iconName, size = 24,color, svgProp } = props;
+  const { iconName, size = 24, color, svgProp } = props;
   const { loading, SvgIcon } = useDynamicSvgImport(iconName);
 
-  if(loading || !SvgIcon) return null;
+  if (loading || !SvgIcon) return null;
 
   return (
-    <div 
-      className="icon-wrapper"
-      style={{ width: size, height: size }}
-    >
-      <SvgIcon 
+    <div className="icon-wrapper" style={{ width: size, height: size }}>
+      <SvgIcon
         {...svgProp}
         style={{ width: size, height: size, fill: color }}
       />
     </div>
   );
-
-
 };

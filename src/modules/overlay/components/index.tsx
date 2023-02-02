@@ -1,41 +1,49 @@
-import { useState } from 'react';
-
 import { useOverlayContext } from '_modules/overlay/hooks/useContext';
 
 import Modal from './modal';
 import './style.css';
 
 export default () => {
-  const { state } = useOverlayContext();
-
-  const [isOpen, setIsOpen] = useState(false);
+  const { state, dispatch } = useOverlayContext();
 
   const handleClick = () => {
-    setIsOpen(true);
+    dispatch({
+      type: 'setSelectedObject',
+      payload: {
+        id: state.id,
+        active: true,
+      },
+    });
   };
 
   const handleClose = () => {
-    setIsOpen(false);
+    dispatch({
+      type: 'setSelectedObject',
+      payload: {
+        id: state.id,
+        active: false,
+      },
+    });
   };
 
   return (
     <>
       <div
         className={`
-          overlay-open ${state.id && !isOpen ? 'active' : ''}
+          overlay-open 
+          ${state.id && !state.active ? 'active' : ''} 
+          ignore-onclickoutside
         `}
       >
         <span className="overlay-open-line" />
-        <div className="overlay-open-button"  onClick={handleClick}>
-          <div className="overlay-open-button-content">
-            more
-          </div>
+        <div className="overlay-open-button" onClick={handleClick}>
+          <div className="overlay-open-button-content">more</div>
         </div>
         <span className="overlay-open-line" />
       </div>
       <Modal
         projectId={state.id || null}
-        isOpen={isOpen}
+        isOpen={state.active}
         handleClose={handleClose}
       />
     </>

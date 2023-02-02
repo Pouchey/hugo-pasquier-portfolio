@@ -38,7 +38,7 @@ const getAnimation = (
     case 'fadeInUp':
       return useSpring({
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(100%)',
+        transform: isVisible ? 'translateY(0)' : 'translateY(99%)',
         config: {
           duration: delay,
         },
@@ -54,17 +54,11 @@ const getAnimation = (
   }
 };
 
-export default (
-  animationType: AnimationType,
-  threshold: number,
-  delay: number
-) => {
+export default (animationType: AnimationType, threshold: number) => {
   const animationRef = useRef<HTMLDivElement | null>(null);
 
-  const entry = useIntersectionObserver(animationRef, {
-    threshold,
-    delay: delay / 2,
-  });
+  const entry = useIntersectionObserver(animationRef, { threshold });
+
   const isVisible = !!entry?.isIntersecting;
 
   const animation = getAnimation(animationType, isVisible, 0);

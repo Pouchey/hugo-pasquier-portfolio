@@ -1,6 +1,7 @@
 import useOnclickOutside from 'react-cool-onclickoutside';
 
-import projectsDetailled from '_assets/projectsDetailled';
+import projects from '_assets/projects';
+
 import Icon from '_components/icon';
 
 import { getProject } from '_utils/projects';
@@ -18,10 +19,9 @@ export default ({ projectId, isOpen, handleClose }: ModalProps) => {
     handleClose();
   });
 
-  const project = getProject('project', projectsDetailled);
-
+  const project = getProject(projectId, projects);
   return (
-    <div className={`overlay-modal ${isOpen ? 'active' : ''}`}>
+    <div className={`overlay-modal ${isOpen ? 'active' : ''} `}>
       <div ref={ref} className="overlay-modal-container">
         <div className="overlay-modal-header">
           <div className="overlay-modal-title">{project?.name}</div>
@@ -45,7 +45,7 @@ export default ({ projectId, isOpen, handleClose }: ModalProps) => {
               target="_blank"
               rel="noreferrer"
             >
-              <Icon iconName="github" size={32} color="#fff"/>
+              <Icon iconName="github" size={32} color="#fff" />
               <p className="ui-network-name">Check on github</p>
             </a>
           </div>

@@ -10,11 +10,11 @@ const initialArgs = DefaultOverlayState;
 
 const OverlayReducer = (
   state: OverlayState,
-  { type, payload }: OverlayActionType
+  { type, payload = DefaultOverlayState }: OverlayActionType
 ) => {
   switch (type) {
     case 'setSelectedObject':
-      return { ...state, id: payload.id };
+      return { ...state, id: payload?.id, active: payload?.active };
     case 'reset':
       return initialArgs;
     default:

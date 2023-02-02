@@ -4,9 +4,7 @@ import { useLandingContext } from '_modules/landing/hooks/useContext';
 
 import './style.css';
 
-export default ({children} : {children: React.ReactNode}
-  
-  ) => {
+export default ({ children }: { children: React.ReactNode }) => {
   const { dispatch: dispatchLanding } = useLandingContext();
 
   const handleClick = (e: { stopPropagation: () => void }) => {

@@ -11,9 +11,9 @@ const LazyScene = React.lazy(() => import('_modules/scene/components'));
 
 function App() {
   return (
-    <LandingProvider>
-      <ResumeProvider>
-        <OverlayProvider>
+    <OverlayProvider>
+      <LandingProvider>
+        <ResumeProvider>
           <div id="app">
             <UI />
             <Landing />
@@ -22,9 +22,9 @@ function App() {
             </Suspense>
             <Resume />
           </div>
-        </OverlayProvider>
-      </ResumeProvider>
-    </LandingProvider>
+        </ResumeProvider>
+      </LandingProvider>
+    </OverlayProvider>
   );
 }
 

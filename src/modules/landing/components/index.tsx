@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import SmoothScroll from '_components/scroll-container';
 
 import { useLandingContext } from '../hooks/useContext';
 
@@ -22,17 +23,20 @@ export default () => {
   }, [state.loading]);
 
   return (
-    <div
-      id="landing"
+    <div 
+      id='landing' 
       className={state.loading ? 'loading' : 'loaded'}
-      ref={ref}
     >
-      <Header />
-      <Home />
-      <Projects />
-      <Explore>
-        <Footer />
-      </Explore>
+      <SmoothScroll 
+        ref={ref}
+      >
+        <Header />
+        <Home />
+        <Projects />
+        <Explore>
+          <Footer />
+        </Explore>
+      </SmoothScroll>
     </div>
   );
 };

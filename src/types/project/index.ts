@@ -8,12 +8,3 @@ export type ProjectType = {
   itchio?: string;
   release?: string;
 };
-
-export type ProjectDetailledType = {
-  id: string;
-  name: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  github: string;
-};

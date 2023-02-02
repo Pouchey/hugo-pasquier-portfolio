@@ -10,9 +10,7 @@ export default [
       Le jeu est développé sous Unreal Engine 5.
     `,
     image: './assets/SansLogique/thumbnail.png',
-    slider: [
-      './assets/SansLogique/thumbnail.png',
-    ],
+    slider: ['./assets/SansLogique/thumbnail.png'],
     release: '12 mai 2023',
   },
   {
@@ -32,13 +30,12 @@ export default [
       './assets/RadialJump/Level2_1.gif',
       './assets/RadialJump/Level2_2.gif',
       './assets/RadialJump/Level3.gif',
-      
     ],
     github: 'https://github.com/HugoPasquier/RadialJump',
     itchio: 'https://nicovi.itch.io/radialjump',
   },
   {
-    name: 'Générateur d\'abres',
+    name: "Générateur d'abres",
     short: 'Généreation procédurale sous Unity.',
     description: `
       Ce générateur procédurale d'abres est un projet réalisé sous Unity en utilisant la génération par L-systems stochastiques.
@@ -54,7 +51,7 @@ export default [
       './assets/TreeGenerator/img_tree_3.png',
       './assets/TreeGenerator/shader_animation.gif',
     ],
-    github: 'https://github.com/HugoPasquier/Tree_Generation_Unity'
+    github: 'https://github.com/HugoPasquier/Tree_Generation_Unity',
   },
   {
     name: 'Nano defense',
@@ -92,7 +89,7 @@ export default [
       './assets/EarthOpenGL/Mix_nuage_nuit.png',
       './assets/EarthOpenGL/Simulation_soleil.png',
     ],
-    github: 'https://github.com/HugoPasquier/EarthOpenGL'
+    github: 'https://github.com/HugoPasquier/EarthOpenGL',
   },
   {
     name: 'Ray Tracer',
@@ -107,7 +104,6 @@ export default [
       './assets/RayTracer/red_mat_spheres.png',
       './assets/RayTracer/mirror_spheres.png',
     ],
-    github: 'https://github.com/HugoPasquier/RayTracer_Gamagora'
+    github: 'https://github.com/HugoPasquier/RayTracer_Gamagora',
   },
-    
 ];

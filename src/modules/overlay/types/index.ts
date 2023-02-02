@@ -2,14 +2,16 @@ import React from 'react';
 
 export interface OverlayState {
   id: string | null;
+  active: boolean;
 }
 export const DefaultOverlayState = {
   id: null,
+  active: false,
 };
 
 export type OverlayActionType = {
   type: 'setSelectedObject' | 'reset';
-  payload: OverlayState;
+  payload?: OverlayState;
 };
 
 export interface OverlayContextInterface {

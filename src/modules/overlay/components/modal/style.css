@@ -1,6 +1,6 @@
 .overlay-modal{
   position: fixed;
-  z-index: 100;
+  z-index: 500;
   top: 0;
   left: 0;
   display: flex;
@@ -10,7 +10,7 @@
   height: 100%;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   transition: all 0.3s ease;
 }
 
@@ -21,19 +21,15 @@
 
 .overlay-modal-container{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  height: 60%;
+  display: grid;
+  grid-template-rows: 80px 4fr 40px;
+  width: 80%;
+  height: 80%;
   padding: 20px;
   background-color: #1e1e1e;
   overflow: hidden;
-  /* glow */
-  box-shadow:  
-    0rem 0rem 10.2rem 1rem #9d1cc494
-  ;
   border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
 }
 
@@ -47,12 +43,11 @@
 }
 
 .overlay-modal-content{
-  display: flex;
-  gap:20px;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   width: 100%;
-  height: 100%;
+  padding: 20px 0;
 }
 
 .overlay-modal-footer{
@@ -82,7 +77,6 @@
 
 .overlay-modal-image{
   max-width: 100%;
-  height: auto;
   object-fit: cover;
   border-radius: 4px;
   transition: 0.3s ease;
@@ -100,9 +94,11 @@
   .overlay-modal-container{
     width: 80%;
     height: 70%;
+    overflow: auto;
   }
   .overlay-modal-content{
-    flex-direction: column;
+    grid-template-columns: 1fr;
+
   }
 
 }

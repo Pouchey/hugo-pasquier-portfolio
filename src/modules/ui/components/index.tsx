@@ -1,4 +1,5 @@
 import Icon from '_components/icon';
+
 import { useLandingContext } from '_modules/landing/hooks/useContext';
 import Overlay from '_modules/overlay/components';
 import { useResumeContext } from '_modules/resume/hooks/useContext';
@@ -34,7 +35,7 @@ export default () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Icon iconName="linkedin" size={32} color="#fff"/>
+            <Icon iconName="linkedin" size={32} color="#fff" />
             <p className="ui-network-name">Hugo Pasquier</p>
           </a>
 
@@ -44,7 +45,7 @@ export default () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Icon iconName="github" size={30} color="#fff"/>
+            <Icon iconName="github" size={30} color="#fff" />
             <p className="ui-network-name">hugopasquier</p>
           </a>
         </div>
