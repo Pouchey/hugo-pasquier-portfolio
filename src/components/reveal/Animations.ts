@@ -57,7 +57,10 @@ const getAnimation = (
 export default (animationType: AnimationType, threshold: number) => {
   const animationRef = useRef<HTMLDivElement | null>(null);
 
-  const entry = useIntersectionObserver(animationRef, { threshold });
+  const entry = useIntersectionObserver(animationRef, {
+    threshold,
+    freezeOnceVisible: true,
+  });
 
   const isVisible = !!entry?.isIntersecting;
 

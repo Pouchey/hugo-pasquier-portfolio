@@ -45,6 +45,7 @@
 .overlay-modal-content{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   grid-gap: 20px;
   width: 100%;
   padding: 20px 0;
@@ -76,7 +77,8 @@
 
 
 .overlay-modal-image{
-  max-width: 100%;
+  justify-self: center;
+  max-width: 400px;
   object-fit: cover;
   border-radius: 4px;
   transition: 0.3s ease;
