@@ -2,10 +2,12 @@ import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
 import { Quaternion, Vector3 } from 'three';
 
+
+
 export const DEFAULT_CAMERA_POSITION = {
-  x: 0,
-  y: 0,
-  z: 5.5,
+  x: 60,
+  y: 15,
+  z: 50,
 };
 export const DEFAULT_CAMERA_ROTATION = {
   x: 0,

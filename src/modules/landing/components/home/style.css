@@ -28,7 +28,7 @@
 @media screen and (max-width: 1000px) {
   .landing-home{
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 40px;
   }
 
   .landing-home-description{
@@ -47,5 +47,6 @@
 
   .landing-description{
     font-size: 1.5rem;
+    text-align: justify;
   }
 }
