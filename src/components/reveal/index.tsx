@@ -7,6 +7,7 @@ interface RevealProps {
   children: React.ReactNode;
   type?: AnimationType;
   threshold?: number;
+  duration?: number;
   delay?: number;
   [key: string]: any;
 }
@@ -16,21 +17,19 @@ export default (props: RevealProps) => {
     children,
     type = 'fadeIn',
     threshold = 0.8,
-    delay = 300,
+    duration = 400,
+    delay = 0,
     ...rest
   } = props;
 
-  const [animationRef, animationStyle] = useAnimation(type, threshold);
-
+  const [animationRef, animationStyle] = useAnimation(
+    type,
+    threshold,
+    delay,
+    duration
+  );
   return (
-    <animated.div
-      ref={animationRef}
-      style={{
-        ...animationStyle,
-        transition: `${delay}ms `,
-      }}
-      {...rest}
-    >
+    <animated.div ref={animationRef} style={animationStyle} {...rest}>
       {children}
     </animated.div>
   );

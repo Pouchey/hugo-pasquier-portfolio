@@ -2,16 +2,17 @@ import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
 import { Quaternion, Vector3 } from 'three';
 
-
-
 export const DEFAULT_CAMERA_POSITION = {
-  x: 60,
-  y: 15,
-  z: 50,
+  x: 9,
+  y: 3.5,
+  z: 13,
 };
+
+// rotate left 75 degrees
+
 export const DEFAULT_CAMERA_ROTATION = {
   x: 0,
-  y: 0,
+  y: 0.3,
   z: 0,
   w: 1,
 };
@@ -33,8 +34,8 @@ export const initCamera = () => ({
 
 export const CameraRig = () => {
   useFrame((state, delta) => {
-    const px = state.pointer.x * state.viewport.width * 2;
-    const py = state.pointer.y * state.viewport.height * 2;
+    const px = state.pointer.x * state.viewport.width;
+    const py = state.pointer.y * state.viewport.height;
     const pz = state.camera.position.z;
     easing.damp3(state.camera.position, [px, py, pz], 2, delta, Infinity);
   });

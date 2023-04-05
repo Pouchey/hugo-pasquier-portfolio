@@ -3,7 +3,7 @@ import React from 'react';
 import {
   LandingContextInterface,
   DefaultLandingContext,
-} from '_modules/landing/types';
+} from '_modules/landing/types/context';
 
 import useLandingReducer from './useReducer';
 

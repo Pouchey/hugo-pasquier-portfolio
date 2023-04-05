@@ -13,7 +13,6 @@
 .ui-title{
   font-size: 20px;
   color: white;
-  transition: 0.3s ease;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -28,7 +27,6 @@
   font-size: 20px;
   white-space: nowrap;
   color: white;
-  transition: 0.3s ease;
 }
 
 .ui-info:hover{
@@ -55,7 +53,6 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  transition: 0.3s ease;
 }
 
 .ui-network{
@@ -63,8 +60,7 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 2px;
-  transition: 0.3s;
+  padding: 4px;
 }
 
 .ui-network-icon{

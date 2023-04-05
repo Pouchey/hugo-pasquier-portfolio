@@ -4,15 +4,15 @@ import {
   LandingActionType,
   LandingState,
   DefaultLandingState,
-} from '_modules/landing/types';
+} from '_modules/landing/types/context';
 
 const initialArgs = DefaultLandingState;
 
 const LandingReducer = (state: LandingState, { type }: LandingActionType) => {
   switch (type) {
-    case 'loaded':
-      return { ...state, loading: false };
-    case 'reset':
+    case 'hide':
+      return { ...state, visible: false };
+    case 'show':
       return initialArgs;
     default:
       return state;

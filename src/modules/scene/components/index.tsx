@@ -7,7 +7,7 @@ import { useOverlayContext } from '_modules/overlay/hooks/useContext';
 
 import { CameraRig, initCamera } from '_utils/camera';
 
-import Decor from './decor';
+import Scene from './Scene';
 
 export default () => {
   const camera = initCamera();
@@ -24,14 +24,10 @@ export default () => {
     >
       <color attach="background" args={['black']} />
       <hemisphereLight intensity={0.15} groundColor="#1e1e1e" />
-      <spotLight
-        intensity={0.5}
-        position={[0, 10, 10]}
-        angle={0.6}
-        penumbra={1}
-        castShadow
-      />
-      <Decor />
+      <Scene position={[0, -1.5, 0]} />
+      <ambientLight intensity={0.3} />
+      <pointLight intensity={1} position={[1, 1, 20]} color="#9d1cc4" />
+      <pointLight intensity={1} position={[20, 1, 10]} color="#d63606" />
       <Ground />
       {!overlay.id && <CameraRig />}
       <BakeShadows />

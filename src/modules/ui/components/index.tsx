@@ -1,4 +1,5 @@
 import Icon from '_components/icon';
+import Reveal from '_components/reveal';
 
 import { useLandingContext } from '_modules/landing/hooks/useContext';
 import Overlay from '_modules/overlay/components';
@@ -13,22 +14,33 @@ export default () => {
   return (
     <>
       <div className="ui-header">
-        <div
+        <Reveal
           className="ui-title"
-          onClick={() => dispatchLanding({ type: 'reset' })}
+          type="fadeInLeft"
+          threshold={0}
+          delay={600}
+          onClick={() => dispatchLanding({ type: 'show' })}
         >
           Hugo Pasquier —
-        </div>
-        <div
+        </Reveal>
+        <Reveal
           className="ui-info"
+          type="fadeInRight"
+          threshold={0}
+          delay={600}
           onClick={() => dispatchResume({ type: 'openResume' })}
         >
           Voir mon CV
-        </div>
+        </Reveal>
       </div>
       <Overlay />
       <div className="ui-footer">
-        <div className="ui-networks">
+        <Reveal
+          className="ui-networks"
+          type="fadeInLeft"
+          threshold={0}
+          delay={600}
+        >
           <a
             className="ui-network"
             href="https://www.linkedin.com/in/hugo-pasquier-7b6353202/"
@@ -48,7 +60,7 @@ export default () => {
             <Icon iconName="github" size={30} color="#fff" />
             <p className="ui-network-name">hugopasquier</p>
           </a>
-        </div>
+        </Reveal>
       </div>
     </>
   );
