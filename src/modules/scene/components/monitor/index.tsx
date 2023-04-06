@@ -3,6 +3,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+import { useVideoTexture } from '@react-three/drei';
+
+import { useOverlayContext } from '_modules/overlay/hooks/useContext';
+import useCameraControls from '_modules/scene/hooks/useCameraControls';
 import { MonitorType } from '_modules/scene/types/Monitor';
 
 interface Props {
@@ -12,12 +16,24 @@ interface Props {
 }
 
 export default ({ nodes, materials, monitor }: Props) => {
+  const { moveCamera } = useCameraControls();
+
+  const { dispatch } = useOverlayContext();
+
+  const handlePointerDown = (e: { stopPropagation: () => void }) => {
+    e.stopPropagation();
+    moveCamera(monitor.focus.position, monitor.position);
+    dispatch({ type: 'setSelectedObject', payload: { id: monitor.id } });
+  };
+
+  const texture = useVideoTexture('./assets/EarthOpenGL/demo_vid.mp4');
   return (
     <group
       name={`Monitor_${monitor.id}`}
       position={monitor.position}
       rotation={monitor.rotation}
       scale={0.5}
+      onPointerDown={handlePointerDown}
     >
       <mesh
         name={`CubeMonitorArm01001_Cube00${monitor.id}`}
@@ -31,8 +47,9 @@ export default ({ nodes, materials, monitor }: Props) => {
         castShadow
         receiveShadow
         geometry={nodes[`CubeMonitorArm01001_Cube00${monitor.id}_1`]?.geometry}
-        material={materials[`blackScreen.00${monitor.id}`]}
-      />
+      >
+        <meshBasicMaterial map={texture} />
+      </mesh>
       <mesh
         name={`CubeMonitorArm01001_Cube00${monitor.id}_2`}
         castShadow

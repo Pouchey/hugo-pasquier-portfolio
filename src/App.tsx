@@ -14,7 +14,6 @@ const LazyScene = lazy(() => import('_modules/scene/components'));
 
 const App = () => {
   const { progress } = useProgress();
-
   return (
     <OverlayProvider>
       <LandingProvider>
@@ -23,7 +22,7 @@ const App = () => {
             <Suspense fallback={null}>
               <LazyScene />
             </Suspense>
-            {progress < 1 ? (
+            {progress < 100 ? (
               <UILoader />
             ) : (
               <>
