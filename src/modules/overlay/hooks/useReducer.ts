@@ -4,7 +4,7 @@ import {
   OverlayActionType,
   OverlayState,
   DefaultOverlayState,
-} from '_modules/overlay/types';
+} from '_modules/overlay/types/context';
 
 const initialArgs = DefaultOverlayState;
 

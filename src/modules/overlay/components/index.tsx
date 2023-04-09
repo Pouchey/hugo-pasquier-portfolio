@@ -17,13 +17,18 @@ export default () => {
   };
 
   const handleClose = () => {
-    dispatch({
-      type: 'setSelectedObject',
-      payload: {
-        id: state.id,
-        active: false,
-      },
-    });
+    if (!state?.landing)
+      dispatch({
+        type: 'reset',
+      });
+    else
+      dispatch({
+        type: 'setSelectedObject',
+        payload: {
+          id: state.id,
+          active: false,
+        },
+      });
   };
 
   return (
@@ -31,7 +36,7 @@ export default () => {
       <div
         className={`
           overlay-open 
-          ${state.id && !state.active ? 'active' : ''} 
+          ${!!state.id && !state.active ? 'active' : ''} 
           ignore-onclickoutside
         `}
       >

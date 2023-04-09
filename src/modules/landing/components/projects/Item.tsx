@@ -13,6 +13,7 @@ export default ({ project }: { project: ProjectType }) => {
       payload: {
         id: project.name,
         active: true,
+        landing: true,
       },
     });
   };

@@ -21,6 +21,7 @@ export default () => {
       camera={camera}
       style={{ width: '100vw', height: '100vh' }}
       eventPrefix="client"
+      className="ignore-onclickoutside"
     >
       <color attach="background" args={['black']} />
       <Scene position={[0, -1.5, 0]} />

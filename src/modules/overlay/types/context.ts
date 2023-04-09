@@ -3,6 +3,7 @@ import React from 'react';
 export interface OverlayState {
   id: string | null;
   active: boolean;
+  landing?: boolean;
 }
 export const DefaultOverlayState = {
   id: null,

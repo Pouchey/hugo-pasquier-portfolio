@@ -15,6 +15,7 @@ export default () => {
         </h1>
         <h2 className="landing__subtitle">Développeur de Jeux Vidéo</h2>
       </div>
+      <img className="landing__home__image" src="./assets/sylvain.png" />
 
       <div className="landing__description">
         <p>

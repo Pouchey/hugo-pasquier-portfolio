@@ -3,7 +3,7 @@ import React from 'react';
 import {
   OverlayContextInterface,
   DefaultOverlayContext,
-} from '_modules/overlay/types';
+} from '_modules/overlay/types/context';
 
 import useOverlayReducer from './useReducer';
 

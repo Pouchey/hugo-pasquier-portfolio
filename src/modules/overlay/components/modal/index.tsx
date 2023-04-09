@@ -1,3 +1,4 @@
+import React from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
 import projects from '_assets/projects';
@@ -14,7 +15,7 @@ interface ModalProps {
   handleClose: () => void;
 }
 
-export default ({ projectId, isOpen, handleClose }: ModalProps) => {
+export default React.memo(({ projectId, isOpen, handleClose }: ModalProps) => {
   const ref = useOnclickOutside(() => {
     handleClose();
   });
@@ -53,4 +54,4 @@ export default ({ projectId, isOpen, handleClose }: ModalProps) => {
       </div>
     </div>
   );
-};
+});
