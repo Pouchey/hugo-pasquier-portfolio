@@ -1,5 +1,6 @@
 export type ProjectType = {
   name: string;
+  showTitle?: boolean;
   short: string;
   description: string;
   image: string;
@@ -7,4 +8,5 @@ export type ProjectType = {
   github?: string;
   itchio?: string;
   release?: string;
+  technologies?: string[];
 };

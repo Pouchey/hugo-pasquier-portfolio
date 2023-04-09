@@ -7,7 +7,7 @@ export default () => {
         className="landing__background__image"
         style={{
           backgroundImage: `url(
-            './assets/test.png')`,
+            './assets/background.png')`,
         }}
       />
     </div>

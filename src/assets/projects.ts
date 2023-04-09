@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'Sans Logique ',
+    name: 'Sans Logique',
     short: 'Sans Logique',
     description: `
       Sans logique est un jeu de puzzle / aventure mettant le joueur en immersion dans un monde étrange et fantastique. 
@@ -11,6 +11,7 @@ export default [
     `,
     image: './assets/SansLogique/thumbnail.png',
     slider: ['./assets/SansLogique/thumbnail.png'],
+    technologies: ['Unity', 'Cpp'],
     release: '12 mai 2023',
   },
   {
@@ -31,11 +32,13 @@ export default [
       './assets/RadialJump/Level2_2.gif',
       './assets/RadialJump/Level3.gif',
     ],
+    technologies: ['Unity', 'Cpp'],
     github: 'https://github.com/HugoPasquier/RadialJump',
     itchio: 'https://nicovi.itch.io/radialjump',
   },
   {
     name: "Générateur d'abres",
+    showTitle: true,
     short: 'Généreation procédurale sous Unity.',
     description: `
       Ce générateur procédurale d'abres est un projet réalisé sous Unity en utilisant la génération par L-systems stochastiques.

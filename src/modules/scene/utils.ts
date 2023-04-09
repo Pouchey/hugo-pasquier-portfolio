@@ -16,6 +16,7 @@ export const getDefaultState = () => ({
 export const getMonitors = (): MonitorType[] => [
   {
     id: '1',
+    projectId: 'Sans Logique',
     position: [3.39, 1.7, 8.05],
     rotation: [1.61, 0, 2.76],
     focus: {
@@ -24,6 +25,7 @@ export const getMonitors = (): MonitorType[] => [
   },
   {
     id: '2',
+    projectId: 'Radial Jump',
     position: [4.73, 4.57, 7.28],
     rotation: [1.79, -0.17, 2.65],
     focus: {
@@ -32,6 +34,7 @@ export const getMonitors = (): MonitorType[] => [
   },
   {
     id: '3',
+    projectId: 'Sans Logique',
     position: [6.83, 4.05, 6.74],
     rotation: [1.53, -0.03, 2.23],
     focus: {
@@ -40,6 +43,7 @@ export const getMonitors = (): MonitorType[] => [
   },
   {
     id: '4',
+    projectId: 'Sans Logique',
     position: [6.69, 2.07, 6.7],
     rotation: [1.46, -0.08, 2.52],
     focus: {
@@ -48,6 +52,7 @@ export const getMonitors = (): MonitorType[] => [
   },
   {
     id: '5',
+    projectId: 'Sans Logique',
     position: [5.48, 0.5, 7.83],
     rotation: [1.41, 0.09, 2.58],
     focus: {
@@ -56,6 +61,7 @@ export const getMonitors = (): MonitorType[] => [
   },
   {
     id: '6',
+    projectId: 'Sans Logique',
     position: [3.03, 4.35, 9.43],
     rotation: [0.93, -0.02, -3.1],
     focus: {

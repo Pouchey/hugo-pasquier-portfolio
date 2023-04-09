@@ -1,4 +1,4 @@
-.overlay-modal{
+.overlay__modal{
   position: fixed;
   z-index: 500;
   top: 0;
@@ -14,20 +14,20 @@
   transition: all 0.3s ease;
 }
 
-.overlay-modal.active{
+.overlay__modal.active{
   opacity: 1;
   visibility: visible;
 }
 
-.overlay-modal-container{
+.overlay__modal__container{
   position: relative;
-  display: grid;
-  grid-template-rows: 80px 4fr 40px;
+  display: flex;
+  flex-direction: column;
   width: 80%;
   height: 80%;
-  padding: 20px;
   background-color: #1e1e1e;
   overflow: hidden;
+  border: 3px solid white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
@@ -35,48 +35,62 @@
 
 
 
-.overlay-modal-header{
+.overlay__modal__header{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  
 }
 
-.overlay-modal-content{
+.overlay__modal__content{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   grid-gap: 20px;
   width: 100%;
-  padding: 20px 0;
+  padding: 0 40px;
 }
 
-.overlay-modal-footer{
+
+.overlay__modal__technologies{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* img*/
+.overlay__modal__technology{
+  height: 100px;
+  object-fit: cover;
+  transition: 0.3s ease;
+
+}
+
+.overlay__modal__footer{
   display: flex;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  padding: 8px;
 }
 
 
-.overlay-modal-title{
-  font-size: 2em;
+.overlay__modal__title{
+  font-size: 7vw;
   color: white;
   transition: 0.3s ease;
     
 }
 
-.overlay-modal-title::after{
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #9d1cc4;
-  transition: 0.3s ease;
-}
 
-
-.overlay-modal-image{
+.overlay__modal__image{
   justify-self: center;
   max-width: 400px;
   object-fit: cover;
@@ -84,8 +98,9 @@
   transition: 0.3s ease;
 }
 
-.overlay-modal-description{
+.overlay__modal__description{
   font-size: 1.5em;
+  line-height: 1.5;
   color: white;
   transition: 0.3s ease;
 }
@@ -93,14 +108,17 @@
 
 
 @media screen and (max-width: 1000px) {
-  .overlay-modal-container{
+  .overlay__modal__container{
     width: 80%;
     height: 70%;
     overflow: auto;
   }
-  .overlay-modal-content{
+  .overlay__modal__content{
     grid-template-columns: 1fr;
 
+  }
+  .overlay__modal__description{
+    font-size: 1em;
   }
 
 }

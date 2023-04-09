@@ -23,7 +23,7 @@ export default ({ nodes, materials, monitor }: Props) => {
   const handlePointerDown = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
     moveCamera(monitor.focus.position, monitor.position);
-    dispatch({ type: 'setSelectedObject', payload: { id: monitor.id } });
+    dispatch({ type: 'setSelectedObject', payload: { id: monitor.projectId } });
   };
 
   const texture = useVideoTexture('./assets/EarthOpenGL/demo_vid.mp4');
