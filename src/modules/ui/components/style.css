@@ -1,4 +1,4 @@
-.ui-header{
+.ui__header{
   position: absolute;
   z-index: 10;
   top: 40px;
@@ -10,14 +10,14 @@
   padding: 0 20px;
 }
 
-.ui-title{
+.ui__title{
   font-size: 20px;
   color: white;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.ui-info{
+.ui__info{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,16 +27,17 @@
   font-size: 20px;
   white-space: nowrap;
   color: white;
+  transition: 0.3s ease;
 }
 
-.ui-info:hover{
+.ui__info:hover{
   background:white;
   color: #1e1e1e;
   cursor: pointer;
 
 }
 
-.ui-footer{
+.ui__footer{
   position: absolute;
   z-index: 10;
   bottom: 40px;
@@ -48,14 +49,14 @@
   padding: 0 20px;
 }
 
-.ui-networks{
+.ui__networks{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
 }
 
-.ui-network{
+.ui__network{
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -63,29 +64,29 @@
   padding: 4px;
 }
 
-.ui-network-icon{
+.ui__network-icon{
   width: 2rem;
   height: 2rem;
   border-radius: 4px;
 }
 
-.ui-network-name{
+.ui__network__name{
   font-size: 1rem;
   color: white;
   margin-left: 10px;
 }
 
-.ui-network:hover{
+.ui__network:hover{
   cursor: pointer;
   background: white;
   border-radius: 4px; 
 }
 
-.ui-network:hover svg {
+.ui__network:hover svg {
   fill: #1e1e1e !important;
 }
 
-.ui-network:hover .ui-network-name{
+.ui__network:hover .ui__network__name{
   color: #1e1e1e;
 }
 

@@ -13,9 +13,9 @@ export default () => {
 
   return (
     <>
-      <div className="ui-header">
+      <div className="ui__header">
         <Reveal
-          className="ui-title"
+          className="ui__title"
           type="fadeInLeft"
           threshold={0}
           delay={600}
@@ -24,7 +24,7 @@ export default () => {
           Hugo Pasquier —
         </Reveal>
         <Reveal
-          className="ui-info"
+          className="ui__info"
           type="fadeInRight"
           threshold={0}
           delay={600}
@@ -34,31 +34,31 @@ export default () => {
         </Reveal>
       </div>
       <Overlay />
-      <div className="ui-footer">
+      <div className="ui__footer">
         <Reveal
-          className="ui-networks"
+          className="ui__networks"
           type="fadeInLeft"
           threshold={0}
           delay={600}
         >
           <a
-            className="ui-network"
+            className="ui__network"
             href="https://www.linkedin.com/in/hugo-pasquier-7b6353202/"
             target="_blank"
             rel="noreferrer"
           >
             <Icon iconName="linkedin" size={32} color="#fff" />
-            <p className="ui-network-name">Hugo Pasquier</p>
+            <p className="ui__network__name">Hugo Pasquier</p>
           </a>
 
           <a
-            className="ui-network"
+            className="ui__network"
             href="https://www.github.com/hugopasquier"
             target="_blank"
             rel="noreferrer"
           >
             <Icon iconName="github" size={30} color="#fff" />
-            <p className="ui-network-name">hugopasquier</p>
+            <p className="ui__network__name">hugopasquier</p>
           </a>
         </Reveal>
       </div>

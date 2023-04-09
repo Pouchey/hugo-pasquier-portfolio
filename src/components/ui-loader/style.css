@@ -27,7 +27,7 @@
   position: absolute;
   left: 50%;
   top: 0;
-  background: #FF3D00;
+  background: var(--primary-color);
   width: 3px;
   height: 24px;
   transform: translateX(-50%);
