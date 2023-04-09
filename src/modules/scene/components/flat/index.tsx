@@ -413,6 +413,7 @@ export default ({ nodes, materials }: FlatProps) => {
               }
               material={materials.custom_wall_3}
               position={[-0.15, 0.14, 0.37]}
+              scale={[1, 1, 1.01]}
             />
             <mesh
               name="floor_and_wallCelling_GEO2_floor_and_wallfan_top_0"
@@ -424,6 +425,24 @@ export default ({ nodes, materials }: FlatProps) => {
               }
               material={materials.floor_and_wallfan_top}
             />
+          </group>
+          <group name="Ceiling_bed_2001">
+            <group
+              name="floor_and_wallCelling_Light_GEO10001"
+              position={[-0.28, 0, 13.23]}
+            >
+              <mesh
+                name="floor_and_wallCelling_Light_GEO10_floor_and_wallLight_off"
+                castShadow
+                receiveShadow
+                geometry={
+                  nodes
+                    .floor_and_wallCelling_Light_GEO10_floor_and_wallLight_off
+                    .geometry
+                }
+                material={materials.floor_and_wallLight_off}
+              />
+            </group>
           </group>
           <group name="Ceiling_bed_2">
             <group
@@ -440,6 +459,7 @@ export default ({ nodes, materials }: FlatProps) => {
                     .geometry
                 }
                 material={materials.floor_and_wallLight_off}
+                position={[0, 0, 6.53]}
               />
             </group>
             <group
@@ -858,7 +878,7 @@ export default ({ nodes, materials }: FlatProps) => {
               castShadow
               receiveShadow
               geometry={nodes.wall_east.geometry}
-              material={materials.custom_wall_3}
+              material={materials['custom_wall_3.001']}
               position={[4.6, 0, -0.54]}
               rotation={[0, Math.PI / 2, 0]}
               scale={[1.06, 1, 0.71]}

@@ -12,6 +12,7 @@ import { getMonitors } from '_modules/scene/utils';
 
 import useCameraControls from '../hooks/useCameraControls';
 
+import Boards from './boards';
 import Flat from './flat';
 import Monitor from './monitor';
 
@@ -29,6 +30,7 @@ export default (props: any) => {
     <group {...props} onPointerDown={() => resetCamera()}>
       <group name="Scene">
         <Flat nodes={nodes} materials={materials} />
+        <Boards nodes={nodes} materials={materials} />
         <mesh
           name="Sphère"
           castShadow
