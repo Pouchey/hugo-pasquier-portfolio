@@ -53,4 +53,4 @@ export default (props: any) => {
   );
 };
 
-useGLTF.preload('/test.glb');
+useGLTF.preload('/scene.glb');
