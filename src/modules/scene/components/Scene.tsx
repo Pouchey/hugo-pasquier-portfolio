@@ -16,7 +16,7 @@ import Flat from './flat';
 import Monitor from './monitor';
 
 export default (props: any) => {
-  const { nodes, materials } = useGLTF('/test.glb');
+  const { nodes, materials } = useGLTF('/scene.glb');
 
   const monitors = getMonitors();
   const { resetCamera } = useCameraControls();

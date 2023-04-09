@@ -23,7 +23,6 @@ export default React.memo(({ projectId, isOpen, handleClose }: ModalProps) => {
   });
 
   const project = getProject(projectId, projects);
-  console.log(project?.technologies);
   return (
     <div className={`overlay__modal ${isOpen ? 'active' : ''} `}>
       <div ref={ref} className="overlay__modal__container">

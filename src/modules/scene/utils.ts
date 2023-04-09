@@ -3,7 +3,7 @@ import { Vector3 } from 'three';
 import { MonitorType } from './types/Monitor';
 
 export const initCamera = () => ({
-  position: new Vector3(9, 5, 13),
+  position: new Vector3(9, 3.5, 13),
 
   fov: 70,
 });
