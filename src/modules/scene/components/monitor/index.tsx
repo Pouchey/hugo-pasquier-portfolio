@@ -5,9 +5,13 @@
 // @ts-nocheck
 import { useVideoTexture } from '@react-three/drei';
 
+import projects from '_assets/projects';
+
 import { useOverlayContext } from '_modules/overlay/hooks/useContext';
 import useCameraControls from '_modules/scene/hooks/useCameraControls';
 import { MonitorType } from '_modules/scene/types/Monitor';
+
+import { getProject } from '_utils/projects';
 
 interface Props {
   nodes: { [name: string]: any };
@@ -20,13 +24,15 @@ export default ({ nodes, materials, monitor }: Props) => {
 
   const { dispatch } = useOverlayContext();
 
+  const project = getProject(monitor.projectId, projects);
+
   const handlePointerDown = (e: { stopPropagation: () => void }) => {
     e.stopPropagation();
     moveCamera(monitor.focus.position, monitor.position);
     dispatch({ type: 'setSelectedObject', payload: { id: monitor.projectId } });
   };
 
-  const texture = useVideoTexture('./assets/EarthOpenGL/demo_vid.mp4');
+  const texture = useVideoTexture(project.video as string);
   return (
     <group
       name={`Monitor_${monitor.id}`}

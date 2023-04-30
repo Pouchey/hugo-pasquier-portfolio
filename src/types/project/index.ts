@@ -5,6 +5,7 @@ export type ProjectType = {
   short: string;
   description: string;
   image: string;
+  video?: string;
   slider: string[];
   github?: string;
   itchio?: string;

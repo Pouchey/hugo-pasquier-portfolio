@@ -11,6 +11,7 @@ export default [
       Le jeu est développé sous Unreal Engine 5.
     `,
     image: './assets/SansLogique/thumbnail.png',
+    video: './assets/EarthOpenGL/demo_vid.mp4',
     slider: ['./assets/SansLogique/thumbnail.png'],
     technologies: ['Unity', 'Cpp'],
     release: '12 mai 2023',
@@ -26,6 +27,7 @@ export default [
        Ce jeu a été développé sous Unity avec Nicolas Vivier et Wesley Petit au sein de notre formation à Gamagora (Université Lumière Lyon 2)
     `,
     image: './assets/RadialJump/Level2_1.gif',
+    video: './assets/RadialJump/Level1_Radial_Jump.mp4',
     slider: [
       './assets/RadialJump/Level1_1.gif',
       './assets/RadialJump/Level1_2.gif',
@@ -48,6 +50,7 @@ export default [
       Ce projet a été mis en place avec Nicolas Vivier et Kevin Francfort au sein de notre formation à Gamagora (Université Lumière Lyon 2).
     `,
     image: './assets/TreeGenerator/shader_animation.gif',
+    video: './assets/EarthOpenGL/demo_vid.mp4',
     slider: [
       './assets/TreeGenerator/editor_animation.gif',
       './assets/TreeGenerator/img_tree_1.png',
@@ -69,6 +72,7 @@ export default [
       visuels
     `,
     image: './assets/NanoDefense/Start_Screen.png',
+    video: './assets/EarthOpenGL/demo_vid.mp4',
     slider: [
       './assets/NanoDefense/Start_Screen.png',
       './assets/NanoDefense/Gameplay_1.png',
@@ -85,6 +89,7 @@ export default [
       Ce projet est basé sur le cours "Monde 3D" de Pierre Benard et Gaël Guennebaud à l'Université de Bordeaux.
     `,
     image: './assets/EarthOpenGL/Normal_mapping.png',
+    video: './assets/EarthOpenGL/demo_vid.mp4',
     slider: [
       './assets/EarthOpenGL/Normal_mapping.png',
       './assets/EarthOpenGL/Jour.png',
@@ -103,6 +108,7 @@ export default [
       Ce projet a été fait en C++ et est basé sur le cours de synthèse d'image de Guillaume Bouchard au sein de la formation Gamagora (Universite Lumière Lyon 2)
     `,
     image: './assets/RayTracer/red_mat_and_mirror_spheres.png',
+    video: './assets/EarthOpenGL/demo_vid.mp4',
     slider: [
       './assets/RayTracer/red_mat_and_mirror_spheres.png',
       './assets/RayTracer/red_mat_spheres.png',
