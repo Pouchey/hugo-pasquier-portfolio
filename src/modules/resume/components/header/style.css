@@ -1,0 +1,12 @@
+.resume__header__img{
+  width: 100vw;
+  height: 250px;
+  max-height: 250px;
+  margin-bottom: 50px;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+}
+
+
+

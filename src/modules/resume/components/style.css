@@ -3,14 +3,25 @@
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: white;
   
   transition: all 0.5s;
 }
+
+.resume__container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}
+
 
 .opened{
   z-index: 20;
@@ -19,4 +30,18 @@
 .closed{
   z-index: -1;
   opacity: 0;
+}
+
+.resume__common__container{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 580px;
+}
+
+.resume__common__container h1{
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--dark-color-1);
 }

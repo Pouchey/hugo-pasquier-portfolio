@@ -1,0 +1,37 @@
+
+.resume__hard__skills__container {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resume__hard__skills_technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.resume__hard__skills_technologies img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.resume__hard__skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.resume__hard__skills__list p {
+  font-size: 1rem;
+}
+
