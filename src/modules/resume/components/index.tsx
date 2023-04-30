@@ -5,7 +5,10 @@ import { useResumeContext } from '_modules/resume/hooks/useContext';
 import HardSkills from './hard-skills';
 import Header from './header';
 import InfoCard from './info-card';
+import School from './school';
+import SoftSkills from './soft-skills';
 import './style.css';
+import Work from './work';
 
 const GoBackButton = () => {
   const { dispatch } = useResumeContext();
@@ -31,6 +34,9 @@ export default () => {
         <Header />
         <InfoCard />
         <HardSkills />
+        <SoftSkills />
+        <School />
+        <Work />
       </div>
     </div>
   );
