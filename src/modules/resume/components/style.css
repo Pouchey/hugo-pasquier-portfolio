@@ -22,7 +22,6 @@
   overflow: auto;
 }
 
-
 .opened{
   z-index: 20;
   opacity: 1;
@@ -31,6 +30,29 @@
   z-index: -1;
   opacity: 0;
 }
+
+.resume__go__back__button{
+  position: fixed;
+  z-index: 10;
+  top: 32px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 8px 16px 8px 50px
+}
+
+.resume__go__back__button span{
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+}
+
 
 .resume__common__container{
   display: flex;

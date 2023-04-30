@@ -13,11 +13,11 @@ export default () => {
           <img src="/assets/technologies/unity.png" alt="unity" />
         </div>
         <div className="resume__hard__skills__list">
-          <p>Programmation Gameplay : exemple</p>
-          <p>Synthèse d'image : exemple</p>
-          <p>Modélisation Géométrique : exemple</p>
-          <p>Intelligence Artificielle : exemple</p>
-          <p>Traitement de l'image et du son : exemple</p>
+          <p>Programmation Gameplay</p>
+          <p>Synthèse d'image</p>
+          <p>Modélisation Géométrique</p>
+          <p>Intelligence Artificielle</p>
+          <p>Traitement de l'image et du son</p>
         </div>
       </div>
     </div>
