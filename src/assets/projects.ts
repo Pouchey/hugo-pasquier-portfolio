@@ -2,6 +2,7 @@ export default [
   {
     name: 'Sans Logique',
     short: 'Sans Logique',
+    backgroundColor: '#5a4e43',
     description: `
       Sans logique est un jeu de puzzle / aventure mettant le joueur en immersion dans un monde étrange et fantastique. 
       Le joueur va devoir résoudre des énigmes en s'aventurant toujours plus profondément dans ce monde mélangeant rêve et réalité.\n 

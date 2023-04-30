@@ -25,7 +25,11 @@ export default React.memo(({ projectId, isOpen, handleClose }: ModalProps) => {
   const project = getProject(projectId, projects);
   return (
     <div className={`overlay__modal ${isOpen ? 'active' : ''} `}>
-      <div ref={ref} className="overlay__modal__container">
+      <div
+        ref={ref}
+        className="overlay__modal__container"
+        style={{ backgroundColor: project?.backgroundColor || '#1e1e1e' }}
+      >
         <div
           className="overlay__modal__header"
           style={{ backgroundImage: `url(${project?.image || ''})` }}
