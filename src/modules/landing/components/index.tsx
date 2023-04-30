@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import Reveal from '_components/reveal';
 
 import { useLandingContext } from '../hooks/useContext';
@@ -16,8 +18,16 @@ export default () => {
     dispatch({ type: 'hide' });
   };
 
+  const ref = useRef<HTMLDivElement>(null);
+  console.log(state.visible);
+  if (state.visible) {
+    if (ref.current) {
+      ref.current.scroll({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   return (
-    <div id="landing" className={state.visible ? '' : 'hide'}>
+    <div id="landing" className={state.visible ? '' : 'hide'} ref={ref}>
       <div className="landing__container full">
         <Background />
         <div className="landing__content">

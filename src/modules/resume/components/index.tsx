@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import Icon from '_components/icon';
 
 import { useResumeContext } from '_modules/resume/hooks/useContext';
@@ -27,10 +29,18 @@ const GoBackButton = () => {
 export default () => {
   const { state } = useResumeContext();
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  if (state.isResumeOpened) {
+    if (ref.current) {
+      ref.current.scroll({ top: 0, behavior: 'smooth' });
+    }
+  }
+
   return (
     <div id="resume" className={state.isResumeOpened ? 'opened' : 'closed'}>
       <GoBackButton />
-      <div className="resume__container">
+      <div className="resume__container" ref={ref}>
         <Header />
         <InfoCard />
         <HardSkills />
